@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,5 @@ Route::middleware([
 
 
 Route::get('add_product',[App\Http\Controllers\ProductController::class, 'store']);
+
+Route::resource('products', ProductController::class);
